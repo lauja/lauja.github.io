@@ -45,7 +45,9 @@ Multiple paths after Avocado (longest path 732 chars):
 <br/><br/>
 ![multiple paths after avocado](/images/optimising_vectors/multiple_paths_after_avocado.png)
 <br/><br/>
-So it fixed the problem, but I leave you with these thoughts from Florina Muntenescu ([https://upday.github.io/blog/vector_drawables_optimisation](https://upday.github.io/blog/vector_drawables_optimisation))
+So it fixed the warning. I have yet to test the timing but I am guessing it will still take roughly as long as we are merely taking the complexity of drawing one complex path and breaking it down in to multiple. 
+
+I leave you with these thoughts from Florina Muntenescu ([https://upday.github.io/blog/vector_drawables_optimisation](https://upday.github.io/blog/vector_drawables_optimisation))
 
 > The VectorDrawable rendering duration is influenced by the size of the image, and by its complexity. If the drawable contains complicated paths then it will take longer to draw. <br/><br/> …. <br/><br/> Is your VectorDrawable really complex, big, and with complicated paths? Then it’s just better to use a raster image. The size of the APK will grow, but the performance of your app won’t be decreased by the VectorDrawable render time. Instead of using PNG files, start using [WebP images](https://developers.google.com/speed/webp/).
 
